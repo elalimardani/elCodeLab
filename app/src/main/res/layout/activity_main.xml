@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bg_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/introMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="332dp"
+        android:shadowColor="#000"
+        android:shadowDx="5"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="@string/introMessage"
+        android:textColor="#D9D9D9"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="102dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="520dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338"
+        app:srcCompat="@drawable/person" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="135dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="365dp" />
+
+    <ImageView
+        android:id="@+id/girlImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="12dp"
+        android:onClick="toGirl"
+        android:src="@drawable/girl"
+        app:layout_constraintBottom_toTopOf="@id/education"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg_main"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/theGirl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:onClick="toGirl"
+        android:text="@string/theGirl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_main" />
+
+    <ImageView
+        android:id="@+id/codeImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="12dp"
+        android:onClick="toCode"
+        android:src="@drawable/code"
+        app:layout_constraintBottom_toTopOf="@id/refImage"
+        app:layout_constraintEnd_toStartOf="@id/theDesign"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toEndOf="@id/girlImage"
+        app:layout_constraintTop_toBottomOf="@id/bg_main"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/theCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:onClick="toCode"
+        android:text="@string/theCode"
+        app:layout_constraintEnd_toStartOf="@id/theDesign"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toEndOf="@id/theGirl"
+        app:layout_constraintTop_toBottomOf="@+id/bg_main" />
+
+    <ImageView
+        android:id="@+id/designImg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="68dp"
+        android:onClick="toDesign"
+        android:src="@drawable/design"
+        app:layout_constraintBottom_toTopOf="@id/connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/codeImage"
+        app:layout_constraintTop_toBottomOf="@id/bg_main"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/theDesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toDesign"
+        android:text="@string/theDesign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toEndOf="@id/theCode"
+        app:layout_constraintTop_toBottomOf="@+id/designImg"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="521dp" />
+
+    <ImageView
+        android:id="@+id/educationImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:onClick="toEducation"
+        android:src="@drawable/education"
+        app:layout_constraintBottom_toTopOf="@id/education"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/theGirl" />
+
+    <TextView
+        android:id="@+id/education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:onClick="toEducation"
+        android:text="@string/education"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/educationImage" />
+
+
+    <ImageView
+        android:id="@+id/refImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:onClick="toReferences"
+        android:src="@drawable/ref"
+        app:layout_constraintEnd_toStartOf="@id/connectImage"
+        app:layout_constraintStart_toEndOf="@id/educationImage"
+        app:layout_constraintTop_toBottomOf="@id/theCode" />
+
+    <TextView
+        android:id="@+id/references"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:onClick="toReferences"
+        android:text="@string/references"
+        app:layout_constraintEnd_toStartOf="@id/connect"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@id/education"
+        app:layout_constraintTop_toBottomOf="@+id/theCode" />
+
+    <ImageView
+        android:id="@+id/connectImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:onClick="toConnect"
+        android:src="@drawable/connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/refImage"
+        app:layout_constraintTop_toBottomOf="@id/theDesign" />
+
+    <TextView
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:onClick="toConnect"
+        android:text="@string/connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toEndOf="@id/references"
+        app:layout_constraintTop_toBottomOf="@+id/theDesign" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="677dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="273dp" />
+
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="com.example.elcodelab.RateFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="575dp"
+        app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/references"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

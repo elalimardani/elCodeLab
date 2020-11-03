@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ElCodeLab</string>
+    <string name="introMessage">I am El and I am an aspiring developer</string>
+    <string name="theGirl">the girl</string>
+    <string name="theCode">the code</string>
+    <string name="theDesign">the design</string>
+    <string name="education">education</string>
+    <string name="references">references</string>
+    <string name="connect">connect</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
