@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 public class Connect extends AppCompatActivity {
 
@@ -18,6 +19,11 @@ public class Connect extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.fragmentContainer, new HomeFragment());
+        ft.commit();
+
 
         editTextReceiver = (EditText)findViewById(R.id.editReceiver);
         editTextSubject = (EditText) findViewById(R.id.editSubject);

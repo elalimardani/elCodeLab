@@ -23,6 +23,34 @@
         app:layout_constraintVertical_bias="0.465"
         app:srcCompat="@drawable/googlemaps" />
 
+
+    <ImageButton
+        android:id="@+id/cameraButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="52dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:onClick="openSayCheese"
+        android:scaleType="fitCenter"
+        android:src="@drawable/camera"
+        app:layout_constraintBottom_toTopOf="@id/mapButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/cameraText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Say Cheese!"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cameraButton" />
+
     <ImageButton
         android:id="@+id/galleryButton"
         android:layout_width="100dp"
@@ -40,6 +68,33 @@
         app:srcCompat="@drawable/gallery" />
 
     <TextView
+        android:id="@+id/animationText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:text="Animate!"
+        app:layout_constraintStart_toEndOf="@id/cameraText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/galleryButton"
+        app:layout_constraintTop_toBottomOf="@id/animateButton" />
+
+    <ImageButton
+        android:id="@+id/animateButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@id/cameraButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/galleryButton"
+        app:layout_constraintTop_toTopOf= "parent"
+        app:layout_constraintVertical_bias="0.665"
+        android:background="@color/white"
+        android:src="@drawable/animation"
+        android:onClick="openAnimations"
+        />
+
+    <TextView
         android:id="@+id/mapsText"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -53,11 +108,55 @@
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:text="Get data from gallery"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@id/mapsText"
         app:layout_constraintTop_toBottomOf="@id/mapButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="244dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="269dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="240dp" />
+
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+</FrameLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

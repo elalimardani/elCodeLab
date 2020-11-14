@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         }else{
             setContentView(R.layout.activity_main);
 
-            RateFragment rateFragment = new RateFragment();
+/*            RateFragment rateFragment = new RateFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.rateFragment, rateFragment).addToBackStack(null).commit();
+            fragmentTransaction.replace(R.id.rateFragment, rateFragment).addToBackStack(null).commit();*/
 
             checkOsVersion();
         }

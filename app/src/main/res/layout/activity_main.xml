@@ -235,16 +235,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="273dp" />
 
-    <fragment
-        android:id="@+id/rateFragment"
-        android:name="com.example.elcodelab.RateFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="575dp"
-        app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/references"
-    app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
