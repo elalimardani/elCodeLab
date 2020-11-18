@@ -10,4 +10,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="design_text">Website Design:</string>
+    <string name="now_go_back">NOW GO BACK</string>
+    <string name="custom_transition">CUSTOM TRANSITION</string>
+    <string name="custom_transition_happening">Custom Transition Happening</string>
+    <string name="imageDesc">ImageDesc</string>
+    <string name="go_to_another_activity">GO TO ANOTHER ACTIVITY</string>
+    <string name="go_back">NOW GO BACK</string>
+    <string name="make_custom_transition">MAKE CUSTOM TRANSITION</string>
+    <string name="explode">EXPLODE</string>
+    <string name="fade">FADE</string>
 </resources>

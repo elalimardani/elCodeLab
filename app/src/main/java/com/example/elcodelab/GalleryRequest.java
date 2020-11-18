@@ -23,9 +23,9 @@ public class GalleryRequest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_request);
 
-    /*    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.fragmentContainer, new HomeFragment());
-        ft.commit();*/
+        ft.commit();
     }
 
     public void requestFiles(View view){

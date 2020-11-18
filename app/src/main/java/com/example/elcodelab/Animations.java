@@ -25,6 +25,12 @@ public class Animations extends AppCompatActivity {
         setContentView(R.layout.activity_animations);
     }
 
+    public void slideToSecondActivity(View view){
+        //Bundle animationBundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
+        Intent intent = new Intent(this, CustomTransitionActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
 
 
 }

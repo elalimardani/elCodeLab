@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ElCodeLab">
+        <activity android:name=".CustomTransitionActivity"></activity>
         <activity android:name=".Animations" />
         <activity android:name=".SayCheese" />
         <activity android:name=".GalleryRequest" />
