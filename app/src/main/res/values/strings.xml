@@ -21,4 +21,7 @@
     <string name="fade">FADE</string>
     <string name="say_cheese">Say Cheese!</string>
     <string name="animate">Animate!</string>
+    <string name="transferable_skills">TRANSFERABLE SKILLS LEARNED:</string>
+    <string name="educationDisplay">Critical thinking # Time management # Reasoning # Communication # Research # Analysis # Problem-solving # Numeracy</string>
+    <string name="what_I_learned">Data Structures and Algorithms / C# / Java / HTML / CSS / SQL / MongoDB / JavaScript / NodeJS / Git / Android Java / Unix / MVC / Agile / SOLID </string>
 </resources>
