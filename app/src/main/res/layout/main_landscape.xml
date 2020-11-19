@@ -41,7 +41,7 @@
         android:id="@+id/imageView3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="136dp"
@@ -52,13 +52,24 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/girl" />
 
+    <TextView
+        android:id="@+id/girlText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        android:text="The Girl"
+        android:textColor="@color/white"
+        android:layout_marginStart="25dp"/>
+
+"
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="135dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="136dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,13 +78,24 @@
         app:layout_constraintTop_toBottomOf="@+id/introMessage"
         app:srcCompat="@drawable/code" />
 
+    <TextView
+        android:id="@+id/codeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/girlText"
+        app:layout_constraintTop_toBottomOf="@id/imageView5"
+        android:textColor="@color/white"
+        android:text="The Code"
+        android:layout_marginStart="90dp"/>
+
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="13dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="135dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="136dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,6 +103,16 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/introMessage"
         app:srcCompat="@drawable/design" />
+
+    <TextView
+        android:id="@+id/designText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/codeText"
+        app:layout_constraintTop_toBottomOf="@id/imageView6"
+        android:textColor="@color/white"
+        android:text="The Design"
+        android:layout_marginStart="80dp"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -97,6 +129,16 @@
         app:layout_constraintTop_toBottomOf="@+id/introMessage"
         app:srcCompat="@drawable/education" />
 
+    <TextView
+        android:id="@+id/educationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/designText"
+        app:layout_constraintTop_toBottomOf="@id/imageView7"
+        android:textColor="@color/white"
+        android:text="Education"
+        android:layout_marginStart="70dp"/>
+
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="100dp"
@@ -111,12 +153,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ref" />
 
+    <TextView
+        android:id="@+id/refText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/educationText"
+        app:layout_constraintTop_toBottomOf="@id/imageView8"
+        android:textColor="@color/white"
+        android:text="References"
+        android:layout_marginStart="50dp"/>
+
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="175dp"
-
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="136dp"
         android:scaleType="fitCenter"
@@ -125,6 +176,17 @@
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/connect" />
+
+    <TextView
+        android:id="@+id/connectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/refText"
+        app:layout_constraintTop_toBottomOf="@id/imageView9"
+        android:textColor="@color/white"
+        android:text="The Code"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="20dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
