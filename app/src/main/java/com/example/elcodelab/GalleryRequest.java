@@ -22,10 +22,6 @@ public class GalleryRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_request);
-
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.fragmentContainer, new HomeFragment());
-        ft.commit();
     }
 
     public void requestFiles(View view){
@@ -34,7 +30,6 @@ public class GalleryRequest extends AppCompatActivity {
         startActivityForResult(mRequestFileIntent, 0);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -65,8 +60,10 @@ public class GalleryRequest extends AppCompatActivity {
             returnCursor.moveToFirst();
             textViewType.setText("File Type: " + mimeType);
             textViewName.setText("File Name:\n" + returnCursor.getString(nameIndex));
-            textViewSize.setText("File Size: " + returnCursor.getLong(sizeIndex));
+            textViewSize.setText("File Size: " + Long.toString(returnCursor.getLong(sizeIndex)));
             imageView.setImageBitmap(imageFile);
         }
     }
+
+
 }

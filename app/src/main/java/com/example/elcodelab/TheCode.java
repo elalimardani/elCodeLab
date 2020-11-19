@@ -45,12 +45,6 @@ public class TheCode extends AppCompatActivity {
 
 
 
-    //Camera Intent - With Permissions check and Request
-    public void openSayCheese(View view){
-        Intent intent = new Intent(this, SayCheese.class);
-        startActivity(intent);
-    }
-
 
     //Animations page
     public void openAnimations(View view){
@@ -92,6 +86,11 @@ public class TheCode extends AppCompatActivity {
     //Data Sharing Intent
     public void galleryRequest(View view){
         Intent intent = new Intent(this, GalleryRequest.class);
+        startActivity(intent);
+    }
+
+    public void openCheese(View view){
+        Intent intent = new Intent(this, Cheese.class);
         startActivity(intent);
     }
 

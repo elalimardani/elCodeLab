@@ -31,7 +31,6 @@
         android:layout_marginBottom="52dp"
         android:adjustViewBounds="true"
         android:background="@color/white"
-        android:onClick="openSayCheese"
         android:scaleType="fitCenter"
         android:src="@drawable/camera"
         app:layout_constraintBottom_toTopOf="@id/mapButton"
@@ -39,14 +38,15 @@
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:onClick="openCheese"/>
 
     <TextView
         android:id="@+id/cameraText"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Say Cheese!"
+        android:text="@string/say_cheese"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cameraButton" />
@@ -72,7 +72,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
-        android:text="Animate!"
+        android:text="@string/animate"
         app:layout_constraintStart_toEndOf="@id/cameraText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/galleryButton"

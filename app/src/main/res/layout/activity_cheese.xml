@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SayCheese">
+    tools:context=".Cheese">
 
-    <ImageView
-        android:id="@+id/cameraImage"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <Button
+        android:id="@+id/cheeseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="526dp"
+        android:layout_marginBottom="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/sayCheeseBtn"
+    <ImageView
+        android:id="@+id/cameraImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
-        android:layout_marginBottom="86dp"
-        android:text="SAY CHEESE!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="209dp"
+        android:layout_marginBottom="189dp"
+        app:layout_constraintBottom_toTopOf="@+id/cheeseBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cameraImage"
-        android:onClick="dispatchTakePictureIntent"/>
-
+        app:layout_constraintTop_toTopOf="parent"
+         />
 </androidx.constraintlayout.widget.ConstraintLayout>

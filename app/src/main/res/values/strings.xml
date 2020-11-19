@@ -19,4 +19,6 @@
     <string name="make_custom_transition">MAKE CUSTOM TRANSITION</string>
     <string name="explode">EXPLODE</string>
     <string name="fade">FADE</string>
+    <string name="say_cheese">Say Cheese!</string>
+    <string name="animate">Animate!</string>
 </resources>
