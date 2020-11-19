@@ -1,9 +1,5 @@
 package com.example.elcodelab;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -11,7 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private List<PersonReference> personReferencesList;
+    private PersonAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +34,20 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.rateFragment, rateFragment).addToBackStack(null).commit();*/
 
             checkOsVersion();
+
+            recyclerView = findViewById(R.id.refAdapter);
+            personReferencesList = References.loadInput(this);
+
+            //if list is empty
+            if(personReferencesList == null){
+                personReferencesList = new ArrayList<>();
+            }
+
+            //implement recyclerView
+            LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+            recyclerView.setLayoutManager(layoutManager);
+            adapter = new PersonAdapter(this, personReferencesList);
+            recyclerView.setAdapter(adapter);
         }
     }
 
