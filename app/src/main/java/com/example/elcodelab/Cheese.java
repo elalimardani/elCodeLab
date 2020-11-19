@@ -3,17 +3,21 @@ package com.example.elcodelab;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -22,15 +26,24 @@ import android.widget.Toast;
 public class Cheese extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int CAMERA_PERMISSION_CODE = 100;
-
+   
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cheese);
+
     }
 
-    @Override
+     public void sayCheese(View view) {
+        checkPermission(Manifest.permission.CAMERA, CAMERA_PERMISSION_CODE);
+        /*Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+        }*/
+    }
+
+ /*   @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -41,54 +54,50 @@ public class Cheese extends AppCompatActivity {
             mImageView.setImageBitmap(imageBitmap);
         }
     }
+*/
 
-    public void sayCheese(View view){
-        checkPermission(Manifest.permission.CAMERA,
-                CAMERA_PERMISSION_CODE);
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if(intent.resolveActivity(getPackageManager()) != null){
-            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+    public void checkPermission(String permission, int requestCode) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
+        } else{
+            Toast.makeText(this, "Permission granted", Toast.LENGTH_LONG).show();
         }
+
     }
 
-
-    public void checkPermission(String permission, int requestCode)
-    {
-        if (ContextCompat.checkSelfPermission(Cheese.this, permission)
-                == PackageManager.PERMISSION_DENIED) {
-
-
-            ActivityCompat.requestPermissions(Cheese.this,
-                    new String[] { permission },
-                    requestCode);
-        }
-        else {
-            Toast.makeText(Cheese.this,
-                    "Permission already granted",
-                    Toast.LENGTH_SHORT)
-                    .show();
-        }
-    }
-
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
-    {
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case CAMERA_PERMISSION_CODE: {
+                Log.i("Camera", "G : " + grantResults[0]);
 
-        if (requestCode == CAMERA_PERMISSION_CODE) {
-            if (grantResults.length > 0
-                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(Cheese.this,
-                        "Camera Permission Granted",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+                    Toast.makeText(this, "granted", Toast.LENGTH_LONG).show();
+
+            } else {
+
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale
+                        (this, Manifest.permission.CAMERA)) {
+
+                    Toast.makeText(this, "need permission", Toast.LENGTH_LONG).show();
+
+                } else {
+
+                }
             }
-            else {
-                Toast.makeText(Cheese.this,
-                        "Camera Permission Denied",
-                        Toast.LENGTH_SHORT)
-                        .show();
-            }
+            return;
         }
 
+
     }
+
+    }
+
+
+
+
 }

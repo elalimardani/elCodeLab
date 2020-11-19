@@ -17,8 +17,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/say_cheese_btn"
         android:onClick="sayCheese"
-        android:text="SAY CHEESE"/>
+     />
 
     <ImageView
         android:id="@+id/cameraImage"
